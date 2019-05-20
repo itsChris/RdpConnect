@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28902.138
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdpConnect.UI", "RdpConnect\RdpConnect.UI.csproj", "{86F5D311-5D90-49FB-9BAC-92CCA7D4860F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdpConnect.UI", "RdpConnect.UI\RdpConnect.UI.csproj", "{86F5D311-5D90-49FB-9BAC-92CCA7D4860F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdpConnect.Core", "RdpConnect.Core\RdpConnect.Core.csproj", "{CD0F0FF8-E5EE-4EC4-B79C-F0BC7A1B01AE}"
 EndProject
