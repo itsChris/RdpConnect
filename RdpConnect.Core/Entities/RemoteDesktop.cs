@@ -7,14 +7,17 @@ using System.Text;
 
 namespace RdpConnect.Core.Entities
 {
-    public class RemoteDesktop : BaseEntity<int>
+    public class RemoteDesktop : BaseEntity<Guid>
     {
         public IPEndPoint Address { get; set; }
         public List<RemoteUser> RemoteUsers { get; private set; }
 
         public RemoteDesktop(string IP, int port)
         {
-            //Id = ;
+            if (string.IsNullOrEmpty(IP))
+                throw new ArgumentNullException("IP");
+
+            //Id = Guid.NewGuid();
             Address = new IPEndPoint(IPAddress.Parse(IP), port);
             RemoteUsers = new List<RemoteUser>();
         }
