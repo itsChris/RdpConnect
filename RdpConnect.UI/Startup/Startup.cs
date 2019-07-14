@@ -2,9 +2,6 @@
 using RdpConnect.Core.Interfaces;
 using RdpConnect.Infrastructure.Data;
 using RdpConnect.UI.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RdpConnect.UI.Startup
 {

@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using RdpConnect.Infrastructure.Data;
 using RdpConnect.UI.Startup;
-using RdpConnect.UI.ViewModels;
 using System;
 using System.Windows;
 
@@ -12,7 +10,7 @@ namespace RdpConnect
     /// </summary>
     public partial class App : Application
     {
-        public IServiceProvider ServiceProvider { get; private set; } 
+        public IServiceProvider ServiceProvider { get; private set; }
 
         private void App_Startup(object sender, StartupEventArgs e)
         {

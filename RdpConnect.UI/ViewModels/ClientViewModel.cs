@@ -9,6 +9,18 @@ namespace RdpConnect.UI.ViewModels
         private readonly IClientDataService _clientDataService;
         private Client _selectedClient;
 
+        public ObservableCollection<Client> Clients { get; set; }
+
+        public Client SelectedClient
+        {
+            get { return _selectedClient; }
+            set
+            {
+                _selectedClient = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ClientViewModel(IClientDataService clientDataService)
         {
             Clients = new ObservableCollection<Client>();
@@ -23,18 +35,6 @@ namespace RdpConnect.UI.ViewModels
 
             foreach (var client in clients)
                 Clients.Add(client);
-        }
-
-        public ObservableCollection<Client> Clients { get; set; }
-
-        public Client SelectedClient
-        {
-            get { return _selectedClient; }
-            set
-            {
-                _selectedClient = value;
-                OnPropertyChanged();
-            }
         }
     }
 }
