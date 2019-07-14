@@ -12,7 +12,7 @@ namespace RdpConnect.Core.Entities
 
         public RemoteUser(string name, string password)
         {
-            Id = Guid.NewGuid();
+            //Id = Guid.NewGuid();
             Name = name;
             Password = password;
         }

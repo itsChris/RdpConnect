@@ -13,7 +13,7 @@ namespace RdpConnect.Core.Entities
 
         public Client(string name)
         {
-            Id = Guid.NewGuid();
+            //Id = Guid.NewGuid();
             Name = name;
             RemoteDesktops = new List<RemoteDesktop>();
         }
