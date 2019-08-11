@@ -9,11 +9,12 @@ namespace RdpConnect.Core.Entities
     public class Client : BaseEntity<Guid>
     {
         public string Name { get; set; }
+        public bool NeedVPN { get; set; }
         public List<RemoteDesktop> RemoteDesktops { get; private set; }
 
         public Client(string name)
         {
-            //Id = Guid.NewGuid();
+            Id = Guid.NewGuid();
             Name = name;
             RemoteDesktops = new List<RemoteDesktop>();
         }

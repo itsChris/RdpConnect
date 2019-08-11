@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RdpConnect"
+        xmlns:view="clr-namespace:RdpConnect.UI.Views"
         mc:Ignorable="d"
         Title="RdpConnects" Height="450" Width="800">
     <Grid>
@@ -11,8 +12,7 @@
             <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListView ItemsSource="{Binding Clients}"
-                  SelectedItem="{Binding SelectedClient, Mode=TwoWay}"
-                  DisplayMemberPath="Name"/>
+        <view:ClientNavigateView DataContext="{Binding ClientNavigateViewModel}"/>
+        <view:ClientView Grid.Column="1" DataContext="{Binding ClientViewModel}"/>
     </Grid>
 </Window>

@@ -8,11 +8,26 @@ namespace RdpConnect.Infrastructure.Data
 {
     public class ClientDataService : IClientDataService
     {
+        private List<Client> Clients;
+
+        public ClientDataService()
+        {
+            Clients = new List<Client>();
+            Clients.Add(new Client("Company"));
+            Clients.Add(new Client("Enterprise"));
+            Clients.Add(new Client("Westeros"));
+        }
+
         public IEnumerable<Client> GetAllClients()
         {
-            yield return new Client("Company");
-            yield return new Client("Enterprise");
-            yield return new Client("Westeros");
+
+            foreach (var client in Clients)
+                yield return client;
+        }
+
+        public Client GetByGuid(Guid guid)
+        {
+            return Clients.Find(c => c.Id.Equals(guid));
         }
     }
 }

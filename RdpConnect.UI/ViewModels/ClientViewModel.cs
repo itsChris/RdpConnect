@@ -1,40 +1,44 @@
 ﻿using RdpConnect.Core.Entities;
 using RdpConnect.Core.Interfaces;
-using System.Collections.ObjectModel;
+using RdpConnect.Core.Events;
+using System;
 
 namespace RdpConnect.UI.ViewModels
 {
     public class ClientViewModel : ViewModelBase
     {
         private readonly IClientDataService _clientDataService;
-        private Client _selectedClient;
+        private readonly ClientEvent _clientEvent;
 
-        public ObservableCollection<Client> Clients { get; set; }
-
-        public Client SelectedClient
+        private Client _client;
+        public Client Client
         {
-            get { return _selectedClient; }
+            get
+            {
+                return _client;
+            }
             set
             {
-                _selectedClient = value;
+                _client = value;
                 OnPropertyChanged();
             }
         }
 
-        public ClientViewModel(IClientDataService clientDataService)
+        public ClientViewModel(IClientDataService clientDataService, ClientEvent clientEvent)
         {
-            Clients = new ObservableCollection<Client>();
-            this._clientDataService = clientDataService;
+            _clientDataService = clientDataService;
+            _clientEvent = clientEvent;
+            _clientEvent.Subscribe(OnOpenClientView);
         }
 
-        public void Load()
+        public void Load(Guid clientGuid)
         {
-            var clients = _clientDataService.GetAllClients();
+            Client = _clientDataService.GetByGuid(clientGuid);
+        }
 
-            Clients.Clear();
-
-            foreach (var client in clients)
-                Clients.Add(client);
+        private void OnOpenClientView(Guid clientGuid)
+        {
+            Load(clientGuid);
         }
     }
 }

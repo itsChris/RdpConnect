@@ -6,19 +6,19 @@ namespace RdpConnect
 {
     public partial class MainWindow : Window
     {
-        private ClientViewModel _clientViewModel;
+        public MainViewModel MainViewModel { get;}
 
-        public MainWindow(ClientViewModel clientViewModel)
+        public MainWindow(MainViewModel mainViewModel)
         {
             InitializeComponent();
-            _clientViewModel = clientViewModel;
-            DataContext = _clientViewModel;
+            MainViewModel = mainViewModel;
+            DataContext = MainViewModel;
             Loaded += WindowLoaded;
         }
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
-            _clientViewModel.Load();
+            MainViewModel.Load();
         }
     }
 }
