@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using RdpConnect.Core.Interfaces;
+using RdpConnect.Core.Interfaces.Data;
 using RdpConnect.Infrastructure.Data;
 using RdpConnect.Core.Events;
 using RdpConnect.UI.ViewModels;

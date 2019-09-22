@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RdpConnect.Core.Interfaces
+namespace RdpConnect.Core.Interfaces.Data
 {
     public interface IRemoteDesktopDataService
     {
