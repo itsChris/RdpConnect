@@ -24,7 +24,7 @@ namespace RdpConnect.UI.ViewModels
                 OnPropertyChanged();
 
                 if (_selectedClient != null)
-                    _clientEvent.Fire(_selectedClient.Id);
+                    _clientEvent.Fire(new ClientEventData(_selectedClient.Id));
             }
         }
 

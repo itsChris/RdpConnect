@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28902.138
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.UI", "RdpConnect.UI\RdpConnect.UI.csproj", "{86F5D311-5D90-49FB-9BAC-92CCA7D4860F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.UI", "src\RdpConnect.UI\RdpConnect.UI.csproj", "{86F5D311-5D90-49FB-9BAC-92CCA7D4860F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.Core", "RdpConnect.Core\RdpConnect.Core.csproj", "{CD0F0FF8-E5EE-4EC4-B79C-F0BC7A1B01AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.Core", "src\RdpConnect.Core\RdpConnect.Core.csproj", "{CD0F0FF8-E5EE-4EC4-B79C-F0BC7A1B01AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.Infrastructure", "RdpConnect.Infrastructure\RdpConnect.Infrastructure.csproj", "{59C736E2-FE5F-4118-8245-8B79DD92E420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.Infrastructure", "src\RdpConnect.Infrastructure\RdpConnect.Infrastructure.csproj", "{59C736E2-FE5F-4118-8245-8B79DD92E420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RdpConnect.UnitTest", "RdpConnect.UnitTest\RdpConnect.UnitTest.csproj", "{A625DB6A-E577-4A47-813F-97BBB9F488A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RdpConnect.Core.UnitTest", "tests\RdpConnect.UnitTest\RdpConnect.Core.UnitTest.csproj", "{A625DB6A-E577-4A47-813F-97BBB9F488A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

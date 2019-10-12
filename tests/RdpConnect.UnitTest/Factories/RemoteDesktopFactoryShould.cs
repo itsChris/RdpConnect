@@ -2,7 +2,7 @@ using RdpConnect.Core.Entities;
 using Xunit;
 using RdpConnect.Core.Factories;
 
-namespace RdpConnect.UnitTest.Core
+namespace RdpConnect.Core.UnitTest.Factories
 {
     public class RemoteDesktopFactoryShould
     {

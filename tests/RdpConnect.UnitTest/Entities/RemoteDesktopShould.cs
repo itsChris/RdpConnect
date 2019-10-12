@@ -3,7 +3,7 @@ using RdpConnect.Core.Exceptions;
 using System;
 using Xunit;
 
-namespace RdpConnect.UnitTest.Core
+namespace RdpConnect.Core.UnitTest.Entities
 {
     public class RemoteDesktopShould
     {

@@ -1,5 +1,5 @@
 ﻿using RdpConnect.Core.Entities;
-using RdpConnect.Core.Interfaces;
+using RdpConnect.Core.Interfaces.Data;
 using System.Collections.ObjectModel;
 
 namespace RdpConnect.UI.ViewModels

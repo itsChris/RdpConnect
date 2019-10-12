@@ -36,9 +36,9 @@ namespace RdpConnect.UI.ViewModels
             Client = _clientDataService.GetByGuid(clientGuid);
         }
 
-        private void OnOpenClientView(Guid clientGuid)
+        private void OnOpenClientView(ClientEventData clientEventData)
         {
-            Load(clientGuid);
+            Load(clientEventData.ClientId);
         }
     }
 }
